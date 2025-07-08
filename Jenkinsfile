@@ -4,9 +4,10 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/AmmuTheSlayer/Diabetes_prediction.git'
+                git branch: 'main', url: 'https://github.com/AmmuTheSlayer/Diabetes_prediction.git'
             }
         }
+
         stage('Build Docker Image') {
             steps {
                 script {
@@ -14,6 +15,7 @@ pipeline {
                 }
             }
         }
+
         stage('Run Docker') {
             steps {
                 script {
