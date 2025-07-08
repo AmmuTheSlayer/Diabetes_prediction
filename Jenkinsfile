@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/diabetes-predictor.git'
+                git 'https://github.com/AmmuTheSlayer/Diabetes_prediction.git'
             }
         }
         stage('Build Docker Image') {
